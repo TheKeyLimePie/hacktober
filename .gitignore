@@ -1,8 +1,9 @@
-Hacktober.aux
-Hacktober.log
-Hacktober.pdf
-Hacktober.synctex.gz
-Hacktober.fdb_latexmk
-Hacktober.fls
-Hacktober.blg
-Hacktober.bbl
+*.aux
+*.log
+*.pdf
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.blg
+*.bbl
+*.dvi
