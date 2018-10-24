@@ -193,5 +193,30 @@
 			\node[labelbox,below=of offspring-2-3,yshift=-5pt] (f4) {fitness: 15\,\%};
 		\end{tikzpicture}
 	\end{center}
-
+	
+	\section{Lethal loneliness fate}
+	\begin{figure}[h]
+	\centering
+		\begin{tikzpicture}[node distance=5em, >=stealth]
+			
+			\tikzstyle{box}=[rectangle, rounded corners, draw=black, text width=8em, minimum height=1em, text centered]
+			\tikzstyle{pop}=[box, fill=rubblue, text=white]
+			\tikzstyle{select}=[box, fill=rubgreen, text=white]
+			\tikzstyle{mutate}=[box, fill=myred, text=white]					
+			\tikzstyle{eval}=[box, fill=white]
+			\tikzstyle{start}=[circle, draw=black, text width=3em, text centered, fill=black!25]
+		
+			\def \radius {8em}
+			
+			\node at ({-360/6 * (0) + 90}:\radius) (population) [pop] {Population $\mu_{all} = \mu + \epsilon$ (You)};
+			\node at ({-360/6 * (1) + 90}:\radius) (matselection) [select] {Mating selection};
+			\node at ({-360/6 * (2) + 90}:\radius) (matfailure) [mutate] {Everybody but you mates};
+			\node at ({-360/6 * (3) + 90}:\radius) (catastrophe) [eval] {Who cares about the population anymore};
+			\draw[->, line width=0.15em] (population) -- (matselection);
+			\draw[->, line width=0.15em] (matselection) -- (matfailure);
+			\draw[->, line width=0.15em] (matfailure) -- (catastrophe);
+		\end{tikzpicture}
+	\caption{Obviously the florbish is grommicking.}
+	\end{figure}
+	
 \end{document}
